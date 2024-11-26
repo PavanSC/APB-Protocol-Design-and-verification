@@ -4,24 +4,37 @@ The Advanced Peripheral Bus (APB) is part of the AMBA (Advanced Microcontroller 
 
 Key Features:
 Simple Interface: Uses a single clock edge for all operations, simplifying design and integration.
+
 Low Power Consumption: Ideal for energy-efficient applications.
+
 Non-pipelined Communication: Transactions are straightforward and occur in a sequential manner.
+
 Ease of Integration: Simplified signal protocol reduces the overhead of connecting multiple peripherals.
 
 
 Signal Overview:
 PCLK: Clock signal for timing operations.
+
 PRESETn: Reset signal, active low.
+
 PADDR: Address bus specifying the peripheral register.
+
 PWRITE: Indicates write (1) or read (0) operation.
+
 PWDATA: Data bus for write operations.
+
 PRDATA: Data bus for read operations.
+
 PSEL: Select signal for peripheral.
+
 PENABLE: Enables data transfer phase.
 
 
 Operation:
 Setup Phase: The master drives the address, control signals, and PSEL.
+
 Enable Phase: PENABLE is asserted, and data transfer occurs based on the PWRITE signal.
+
 Transfer Completion: PENABLE is de-asserted, completing the transaction.
+
 APB is widely used in modern SoCs for its simplicity and reliability in connecting a wide range of peripherals.
